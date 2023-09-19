@@ -45,3 +45,5 @@
 /web/update.php
 /web/web.config
 /.vscode
+#  Ignore npm node_modules
+/node_modules

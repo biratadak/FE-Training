@@ -1,23 +1,9 @@
 {% if not is_inline %}
   {% include "field.html.twig" %}
 {% else %}
-{%
-  set classes = [
-    'field',
-    'field--name-' ~ field_name|clean_class,
-    'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display,
-  ]
-%}
-<span{{ attributes.addClass(classes) }}>
-  <pre>
-  <h1>All available values are,</h1>
-  {{ kint( _context )}}
-</pre>
+<span{{ attributes }} class='custom-header'>
   {%- for item in items -%}
-  <marquee width="20%" direction="" height="100px">
     {{ item.content }}
-  </marquee>
   {%- endfor -%}
 </span>
 {% endif %}

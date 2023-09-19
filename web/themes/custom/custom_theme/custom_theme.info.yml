@@ -1,25 +1,21 @@
-name: 'Custom Theme'
+name: custom_theme
 type: theme
-description: 'Custom Theme subtheme based on Bootstrap 5 theme.'
-core_version_requirement: '^9.4 || ^10'
-'base theme': bootstrap5
+base theme: bootstrap
+description: A flexible theme with a responsive, mobile-first layout.
+package: Custom
+core_version_requirement: ^10
 libraries:
-  - custom_theme/global-styling
-ckeditor_stylesheets:
-  - css/style.css
-ckeditor5-stylesheets:
-  - css/ck5style.css
+  - custom_theme/global
 regions:
-  header: Header
-  nav_branding: 'Navigation branding region'
-  nav_main: 'Main navigation region'
-  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
-  breadcrumb: Breadcrumbs
-  content: 'Main content'
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  featured: 'Featured'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
-  footer: Footer
-  custom_region: 'Custom Region'
-
-libraries-override:
-  bootstrap5/global-styling: false
+  footer: 'Footer'
+  custom_region: 'Custom region'

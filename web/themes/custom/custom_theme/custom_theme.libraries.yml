@@ -1,4 +1,6 @@
-global-styling:
+# define library for node 3
+node-3:
   css:
     theme:
       css/style.css: {}
+   
