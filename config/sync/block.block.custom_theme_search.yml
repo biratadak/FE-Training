@@ -1,4 +1,4 @@
-uuid: ba501a74-c391-47ae-9043-e3fe095c98bb
+uuid: 850fb838-dac2-41c2-8e27-9ed812984fe0
 langcode: en
 status: true
 dependencies:
@@ -7,17 +7,17 @@ dependencies:
   theme:
     - custom_theme
 _core:
-  default_config_hash: HZJ8894mYbX0pdeltUdfnQjONb-BnkflWDqEm_x13m4
-id: custom_theme_search_form
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: custom_theme_search
 theme: custom_theme
-region: header
-weight: 0
+region: sidebar_second
+weight: -1
 provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
-  label: 'Search form'
-  label_display: '0'
+  label: Search
+  label_display: visible
   provider: search
   page_id: ''
 visibility: {  }

@@ -1,4 +1,4 @@
-uuid: 2a1e53e6-d3ae-4112-ae75-e99d659588f5
+uuid: 6bc20efe-e368-4252-9fe0-bc75450e10ee
 langcode: en
 status: true
 dependencies:
@@ -7,18 +7,18 @@ dependencies:
   module:
     - system
   theme:
-    - bootstrap5
+    - bootstrap
 _core:
-  default_config_hash: xBR1vgpnqSUW4pA2LC3rfhu27FQUox9zZEYsdAFM2Sg
-id: bootstrap5_footer
-theme: bootstrap5
+  default_config_hash: 4VDn3bLy009pYlPUWQBHaaGVJu8FPnxNfr2DYrAnNHI
+id: bootstrap_footer
+theme: bootstrap
 region: footer
-weight: -6
+weight: 0
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
   id: 'system_menu_block:footer'
-  label: Footer
+  label: 'Footer menu'
   label_display: '0'
   provider: system
   level: 1

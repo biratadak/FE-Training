@@ -1,4 +1,4 @@
-uuid: 84fdd235-e016-47b5-b000-d7da859f0d5e
+uuid: 7be1cb4e-2bb1-4fbb-88ac-0228bf414fcf
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
   module:
     - system
   theme:
-    - bootstrap5
+    - bootstrap
 _core:
-  default_config_hash: YRZjNp4d68NjJAVhrrUrXKwpV12i7OFWg4MY6Bsd0mw
-id: bootstrap5_account_menu
-theme: bootstrap5
-region: nav_additional
-weight: -7
+  default_config_hash: HrZTblWpMF4fo6BdbBcyHEu5Hp9ds1IZF3FiRd2Q8rU
+id: bootstrap_account_menu
+theme: bootstrap
+region: navigation_collapsible
+weight: 11
 provider: null
 plugin: 'system_menu_block:account'
 settings:
@@ -22,6 +22,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 0
+  depth: 2
   expand_all_items: false
 visibility: {  }

@@ -1,4 +1,4 @@
-uuid: 41e42b4d-6e26-495f-8d87-4af1e23b70ec
+uuid: 390a0fbe-6247-4484-a600-7e136594e69b
 langcode: en
 status: true
 dependencies:
@@ -9,16 +9,16 @@ dependencies:
   theme:
     - custom_theme
 _core:
-  default_config_hash: xBR1vgpnqSUW4pA2LC3rfhu27FQUox9zZEYsdAFM2Sg
+  default_config_hash: 4VDn3bLy009pYlPUWQBHaaGVJu8FPnxNfr2DYrAnNHI
 id: custom_theme_footer
 theme: custom_theme
 region: footer
-weight: -6
+weight: 0
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
   id: 'system_menu_block:footer'
-  label: Footer
+  label: 'Footer menu'
   label_display: '0'
   provider: system
   level: 1

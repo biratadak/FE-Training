@@ -1,4 +1,4 @@
-uuid: 88458783-4cd6-464e-87c5-170dd4a0a72f
+uuid: 059b5693-0c82-4249-aa88-5ea6eb7c3c9c
 langcode: en
 status: true
 dependencies:
@@ -14,8 +14,8 @@ provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Site branding'
-  label_display: '0'
+  label: 'Custom region'
+  label_display: visible
   provider: system
   use_site_logo: true
   use_site_name: true
