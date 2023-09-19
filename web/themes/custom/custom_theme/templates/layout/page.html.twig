@@ -57,6 +57,10 @@ set footer_classes = ' ' ~
 %}
 
 <header>
+ <pre>
+  <h1>All available values from,</h1>
+  {{ dump(_context|keys) }}
+</pre>
   {{ page.header }}
   {% if page.nav_branding or page.nav_main or page.nav_additional %}
   <nav class="{{ nav_classes }}">
@@ -107,7 +111,7 @@ set footer_classes = ' ' ~
           {{ page.sidebar_first }}
         </div>
       {% endif %}
-      <div class="order-1 order-lg-2 {{ content_classes }}">
+      <div class="order-1 order-lg-2 {{ content_classes }}" style="border: 4px dotted green">
         {{ page.content }}
       </div>
       {% if page.sidebar_second %}
