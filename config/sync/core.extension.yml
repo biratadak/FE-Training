@@ -50,4 +50,5 @@ theme:
   stable9: 0
   custom_theme: 0
   b5subtheme: 0
+  bootstrap5: 0
 profile: standard

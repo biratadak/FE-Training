@@ -1,0 +1,9 @@
+{% if not is_inline %}
+  {% include "field.html.twig" %}
+{% else %}
+<span{{ attributes }} class='custom-header'>
+  {%- for item in items -%}
+    {{ item.content }}
+  {%- endfor -%}
+</span>
+{% endif %}
