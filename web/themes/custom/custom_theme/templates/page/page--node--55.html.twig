@@ -62,30 +62,30 @@
         theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
       ]
     %}
-    <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
+    <header{{navbar_attributes.addClass(navbar_classes)}} id="navbar" role="banner">
       {% if not navbar_attributes.hasClass(container) %}
         <div class="{{ container }}">
-      {% endif %}
-      <div class="navbar-header">
-        {{ page.navigation }}
-        {# .btn-navbar is used as the toggle for collapsed navbar content #}
-        {% if page.navigation_collapsible %}
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-            <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
         {% endif %}
-      </div>
-
-      {# Navigation (collapsible) #}
-      {% if page.navigation_collapsible %}
-        <div id="navbar-collapse" class="navbar-collapse collapse">
-          {{ page.navigation_collapsible }}
+        <div class="navbar-header">
+          {{ page.navigation }}
+          {# .btn-navbar is used as the toggle for collapsed navbar content #}
+          {% if page.navigation_collapsible %}
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+              <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          {% endif %}
         </div>
-      {% endif %}
-      {% if not navbar_attributes.hasClass(container) %}
+
+        {# Navigation (collapsible) #}
+        {% if page.navigation_collapsible %}
+          <div id="navbar-collapse" class="navbar-collapse collapse">
+            {{ page.navigation_collapsible }}
+          </div>
+        {% endif %}
+        {% if not navbar_attributes.hasClass(container) %}
         </div>
       {% endif %}
     </header>
@@ -95,11 +95,13 @@
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
-    <div class="row">
+    <div
+      class="row">
 
       {# Header #}
       {% if page.header %}
         {% block header %}
+          {{ attach_library('custom_theme/node-3') }}
           <div class="col-sm-12" role="heading">
             {{ page.header }}
           </div>
@@ -124,7 +126,7 @@
           page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
         ]
       %}
-      <section{{ content_attributes.addClass(content_classes) }}>
+      <section{{content_attributes.addClass(content_classes)}}>
 
         {# Highlighted #}
         {% if page.highlighted %}
@@ -142,8 +144,20 @@
 
         {# Content #}
         {% block content %}
+        {{ attach_library('custom_theme/custom_theme.todo_list') }}
           <a id="main-content"></a>
           {{ page.content }}
+
+          {# Inserting base form for creating todo list #}
+          {% import 'base_form.html.twig' as form %}
+          <form {{content_attributes.addClass('todo-list d-flex flex-row justify-content-around ')}} action="#" id="todo">
+          <div id="todo-list">
+          
+          </div>
+          {{ form.input('todo-text', 'write some TODO')}}
+          <input id="todo-submit" type="submit" value='Add Todo'>
+          </form>
+
         {% endblock %}
       </section>
 
@@ -163,15 +177,18 @@
   {% block footer %}
     <footer class="footer {{ container }}" role="contentinfo">
       {{ page.footer }}
-      {# My custom region where every item will show 3 times in a flex row #}
-{% if page.custom_region %}
-  <div class="custom_region d-flex flex-row justify-content-around">
-    <div class="item1">
-      {{ page.custom_region }}
-    </div>
-    <h3>This custom region is default for pages</h3>
-  </div>
-{% endif %}
+
+      {% if page.custom_region %}
+        <div class="custom_region d-flex flex-row justify-content-around">
+          <div class="item1">
+            {{ page.custom_region }}
+          </div>
+          <marquee direction="up ">
+            <h3>This custom region is only visible in node 3.
+            </h3>
+          </marquee>
+        </div>
+      {% endif %}
     </footer>
   {% endblock %}
 {% endif %}

@@ -3,4 +3,20 @@ node-3:
   css:
     theme:
       css/style.css: {}
-   
+
+custom_theme.custom_style:
+  css:
+    theme:
+      css/custom_style.css: {}
+  js:
+    js/custom.js: {}  
+
+custom_theme.todo_list:
+  css:
+    theme:
+      css/todo_list.css: {}
+  js:
+    js/todo_list.js: {}
+  dependencies:
+    - core/jquery
+    - core/once

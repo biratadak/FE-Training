@@ -23,6 +23,9 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/devel": "^5.1",
+        "drupal/simple_menu_icons": "^3.0",
+        "drupal/twig_tweak": "^3.2",
+        "drupal/webform": "^6.2@beta",
         "drush/drush": "^12.2",
         "kint-php/kint": "^5.0"
     },

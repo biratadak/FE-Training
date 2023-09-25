@@ -171,27 +171,12 @@
           <div class="item1">
             {{ page.custom_region }}
           </div>
-          <marquee direction="right">
-          <h3>This custom region is only visible in node 3
+          <marquee direction="up ">
+          <h3>This custom region is only visible in node 3.
           </h3>
           </marquee>
         </div>
       {% endif %}
-
     </footer>
   {% endblock %}
 {% endif %}
-
-{# 
-{{ attach_library('custom_theme/article-header') }}
-{% if not is_inline %}
-  {% include "field.html.twig" %}
-{% else %}
-<marquee >
-<span{{ attributes }} class='custom-header'>
-  {%- for item in items -%}
-    {{ item.content }}
-  {%- endfor -%}
-</span>
-</marquee>
-{% endif %} #}
