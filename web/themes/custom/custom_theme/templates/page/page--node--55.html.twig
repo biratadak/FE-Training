@@ -156,9 +156,9 @@
           </div>
           <div class="todo-action">
           {{ form.input('todo-text','todo-text', 'write some TODO')}}
-          {{ form.input('todo-submit','todo-submit', '' , '+', 'submit')}}
+          {{ form.input('todo-submit','todo-button todo-submit', '' , '+', 'submit')}}
+          {{ form.input('todo-clear','todo-button todo-clear', '' , 'clear', 'submit')}}
           </div>
-          {# <input id="todo-submit" type="submit" value='Add Todo'> #}
           </form>
 
         {% endblock %}
