@@ -1,18 +1,4 @@
 .page-header {
   width: 30%;
   font-family: "Bradley Hand";
-  background-color: aliceblue;
-}
-
-#todo-list {
-  background-color: antiquewhite;
-  padding: 10px;
-}
-
-#todo-list li {
-  background-color: #e6e5e4;
-  list-style: decimal;
-  text-align: center;
-  border-radius: 5px;
-  margin: 2px 0px;
-}
+  background-color: aliceblue; }

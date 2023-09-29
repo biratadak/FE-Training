@@ -38,7 +38,7 @@ function custom_theme_preprocess_node(array &$variables): void {
  */
 function custom_theme_page_attachments_alter(array &$attachments): void {
   // Adding custom library for 54 node.
-  if (Drupal::request()->getRequestUri() == '/node/54') {
+  if (Drupal::request()->getRequestUri() == '/node/54') { 
     $attachments['#attached']['library'][] = 'custom_theme/custom_theme.custom_style';
   }
 

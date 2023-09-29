@@ -150,12 +150,15 @@
 
           {# Inserting base form for creating todo list #}
           {% import 'base_form.html.twig' as form %}
-          <form {{content_attributes.addClass('todo-list d-flex flex-row justify-content-around ')}} action="#" id="todo">
-          <div id="todo-list">
-          
+          <form {{content_attributes.addClass('todo-list-form d-flex flex-row justify-content-around ')}} action="#" id="todo">
+          <div class="todo-list" id="todo-list">
+      
           </div>
-          {{ form.input('todo-text', 'write some TODO')}}
-          <input id="todo-submit" type="submit" value='Add Todo'>
+          <div class="todo-action">
+          {{ form.input('todo-text','todo-text', 'write some TODO')}}
+          {{ form.input('todo-submit','todo-submit', '' , '+', 'submit')}}
+          </div>
+          {# <input id="todo-submit" type="submit" value='Add Todo'> #}
           </form>
 
         {% endblock %}

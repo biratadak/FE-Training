@@ -14,9 +14,10 @@ custom_theme.custom_style:
 custom_theme.todo_list:
   css:
     theme:
-      css/todo_list.css: {}
+      css/component/todo_list.css: {}
   js:
     js/todo_list.js: {}
   dependencies:
+    - core/drupalSettings
     - core/jquery
-    - core/once
+    - core/jquery.once
