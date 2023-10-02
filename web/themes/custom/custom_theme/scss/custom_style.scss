@@ -1,0 +1,15 @@
+@import "./base/variables";
+
+.custom-header {
+  &::after {
+    content: "class custom-header ";
+  }
+  background-color: $custom-blue-color;
+}
+
+#custom-header {
+  &::after {
+    content: "id custom-header ";
+  }
+  background-color: $custom-red-color;
+}

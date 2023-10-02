@@ -1,0 +1,13 @@
+.custom-header {
+  background-color: #84aeb9;
+}
+.custom-header::after {
+  content: "class custom-header ";
+}
+
+#custom-header {
+  background-color: #d67e7e;
+}
+#custom-header::after {
+  content: "id custom-header ";
+}

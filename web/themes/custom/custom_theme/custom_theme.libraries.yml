@@ -1,0 +1,30 @@
+# define library for node 3
+node-3:
+  css:
+    theme:
+      css/style.css: {}
+
+custom_theme.custom_style:
+  css:
+    theme:
+      css/custom_style.css: {}
+  js:
+    js/custom.js: {}
+
+custom_theme.todo_list:
+  css:
+    theme:
+      css/component/todo_list.css: {}
+  js:
+    js/todo_list.js: {}
+  dependencies:
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+
+custom_library:
+  css:
+    theme:
+      css/component/custom_library.css: {}
+  js:
+    js/custom_library.js: {}
