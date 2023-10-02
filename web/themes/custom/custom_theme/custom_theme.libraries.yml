@@ -9,7 +9,7 @@ custom_theme.custom_style:
     theme:
       css/custom_style.css: {}
   js:
-    js/custom.js: {}  
+    js/custom.js: {}
 
 custom_theme.todo_list:
   css:
@@ -21,3 +21,10 @@ custom_theme.todo_list:
     - core/drupalSettings
     - core/jquery
     - core/jquery.once
+
+custom_library:
+  css:
+    theme:
+      css/component/custom_library.css: {}
+  js:
+    js/custom_library.js: {}

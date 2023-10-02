@@ -1,6 +1,6 @@
-@import './base/variables';
+@import "./base/variables";
 
-.custom-header  {
+.custom-header {
   &::after {
     content: "class custom-header ";
   }

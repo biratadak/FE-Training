@@ -7,7 +7,7 @@
         // Render Todos list if data is avialable.
         if (getLocalStorage() && getLocalStorage().length) {
           renderTodos(getLocalStorage());
-        } 
+        }
         else {
           $("#todo-list").html("No Todos Available");
         }
@@ -24,7 +24,7 @@
         if (inputTodo !== "") {
           addTodo(inputTodo);
           renderTodos();
-        } 
+        }
         else {
           messenger.add("Todos cannot be empty", { type: "warning" });
         }
@@ -39,6 +39,10 @@
         renderTodos();
       });
 
+      $(".todo-action").on("click", "#todo-clear", function () {
+        localStorage.removeItem('todos');
+        renderTodos();
+      });
       /**
        * Get the todos as array.
        *
@@ -53,19 +57,24 @@
        */
       function renderTodos() {
         // Setting each elements ID and value as list.
-        listArr = getLocalStorage().map(
-          (e) =>
+        if(getLocalStorage() && getLocalStorage().length) {
+
+          listArr = getLocalStorage().map(
+            (e) =>
             "<li id='" +
             e[0] +
             "' >" +
             e[1] +
             "<button class='todo-delete' id='" +
             e[0] +
-            "'>X</button>" +
-            "</li>"
-        );
-        renderElement = listArr.toString().replace(/,/g, "");
-        $("#todo-list").html(renderElement);
+            "'>X</button></li>"
+            );
+            renderElement = listArr.toString().replace(/,/g, "");
+            $("#todo-list").html(renderElement);
+          }
+          else {
+            $("#todo-list").html("Empty list");
+          }
       }
 
       /**
