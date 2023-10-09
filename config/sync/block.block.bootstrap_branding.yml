@@ -1,14 +1,16 @@
-uuid: 4a010386-7c1e-4a0e-bb17-07b9942b2cfe
+uuid: 1627e2a3-c24c-4054-9a7e-a90fca4d0c5c
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - b5subtheme
-id: b5subtheme_sitebranding
-theme: b5subtheme
-region: header
+    - bootstrap
+_core:
+  default_config_hash: Cy3vkpYrD1O5JG-BeEnokF0bByHYDEa8CBfWivB4_SQ
+id: bootstrap_branding
+theme: bootstrap
+region: navigation
 weight: 0
 provider: null
 plugin: system_branding_block

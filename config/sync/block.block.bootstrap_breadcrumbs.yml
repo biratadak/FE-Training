@@ -1,15 +1,15 @@
-uuid: a3d07972-4776-4e86-945e-61e6032448ff
+uuid: 85d95274-6b3d-4582-9534-61efe0125043
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - custom_theme
+    - bootstrap
 _core:
   default_config_hash: wDR9JKEATSWldBjw8du8s3G2zjEYeQf88nlld11hMLo
-id: custom_theme_breadcrumbs
-theme: custom_theme
+id: bootstrap_breadcrumbs
+theme: bootstrap
 region: header
 weight: -100
 provider: null

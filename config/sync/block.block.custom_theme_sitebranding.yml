@@ -1,21 +1,21 @@
-uuid: 4a010386-7c1e-4a0e-bb17-07b9942b2cfe
+uuid: 059b5693-0c82-4249-aa88-5ea6eb7c3c9c
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - b5subtheme
-id: b5subtheme_sitebranding
-theme: b5subtheme
-region: header
+    - custom_theme
+id: custom_theme_sitebranding
+theme: custom_theme
+region: custom_region
 weight: 0
 provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Site branding'
-  label_display: '0'
+  label: 'Custom region'
+  label_display: visible
   provider: system
   use_site_logo: true
   use_site_name: true

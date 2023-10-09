@@ -1,0 +1,24 @@
+{
+  "name": "fe",
+  "version": "1.0.0",
+  "description": "For Drupal Frontend training.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "gulp sass",
+    "watch": "gulp sass:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veer-innoraft/FE-Training.git"
+  },
+  "author": "veer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veer-innoraft/FE-Training/issues"
+  },
+  "homepage": "https://github.com/veer-innoraft/FE-Training#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
