@@ -9,15 +9,15 @@
         context
       ).forEach(function (element) {
         // Apply the myCustomBehaviour effect to the elements only once.
-        console.log("inside once func", element);
         $(".content .field--name-field-image img", context).mouseleave(
           function () {
             count++;
           }
-        );
+          );
       });
 
       $(".content .field--name-field-image img").mouseenter(function () {
+        // Setting a random color.
         rgbValue =
           "rgb(" +
           100 * Math.random() +
