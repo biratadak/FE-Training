@@ -1,37 +1,28 @@
 (function ($, Drupal, once) {
-  Drupal.behaviors.todo_list = {
-    // To Set Todo lists.
+  Drupal.behaviors.movie_grid = {
     attach: function (context, settings) {
       val = 0;
-      // once("myCustomBehavior", ".custom-render", context).forEach(function (e) {
-      //   val=0;
-      // });
-      // $(".views-field-field-movie-image").click(function () {
-        //   // console.log("hello"+val++);
-        //   // console.log($(this).parent().children(".views-field-field-description"));
-        //   $item= $(this);
-        //   $item.parent().children(".views-field-field-description").show();
-        //   $(this).parent().parent().html($item.innerHTML());
-        //   console.log($item.parent());
+      // Removing img-responsive class to render images according to image-style.
+      once("removeBootstrapResponsive", ".movies-grid", context).forEach(
+        function (e) {
+          $(e).find("img").removeClass("img-responsive");
+        }
+      );
 
-        //   // $(this).parent("grid-item").child(".views-field-field-description").show();
-        // });
-
+      // Showing popup on click on movie image.
       $(".movies-grid").unbind("click");
-      $('.movies-grid').on('click', ".views-field-field-movie-image", function () {
-        // console.log("hidden");
-        $item = $(this);
-        // $item.parent().children(".views-field-field-description").show();
-        // $(this).parent().parent().html());
-        $item.parent().find(".popup").fadeIn("slow");
-      });
-
-      // $(".popup").unbind("click");
-      $(".movies-grid").on("click",".popup", function (e) {
-        // console.log($(this).hide());
+      $(".movies-grid").on(
+        "click",
+        ".views-field-field-movie-image",
+        function () {
+          $(this).parent().find(".popup").fadeIn("slow");
+        }
+        );
+        
+      // Hide popup on click on popup area.
+      $(".movies-grid").on("click", ".popup", function (e) {
         $(this).fadeOut();
       });
-
     },
   };
 })(jQuery, Drupal, once);
