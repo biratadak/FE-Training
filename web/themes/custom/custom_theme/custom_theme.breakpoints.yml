@@ -1,0 +1,21 @@
+custom_theme.max:
+  lable: 'Dextop'
+  mediaQuery: 'all and (min-width: 851px)'
+  weight: 0
+  multipliers:
+    - 1x
+ 
+custom_theme.mid:
+  lable: 'Tab'
+  mediaQuery: 'all and (min-width: 560px) and (max-width: 850px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+custom_theme.min:
+  lable: 'Mobile'
+  mediaQuery: '(min-width: 0px) and (max-width: 560px)'
+  weight: 2
+  multipliers:
+    - 1x
+

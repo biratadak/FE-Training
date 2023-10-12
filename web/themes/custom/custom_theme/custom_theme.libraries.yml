@@ -4,6 +4,7 @@ node-3:
     theme:
       css/style.css: {}
 
+# define library for custom stule page
 custom_theme.custom_style:
   css:
     theme:
@@ -11,10 +12,11 @@ custom_theme.custom_style:
   js:
     js/custom.js: {}
 
+# define library for todo lsit
 custom_theme.todo_list:
   css:
     theme:
-      css/component/todo_list.css: {}
+      css/layout/todo_list.css: {}
   js:
     js/todo_list.js: {}
   dependencies:
@@ -22,9 +24,19 @@ custom_theme.todo_list:
     - core/jquery
     - core/jquery.once
 
+# define library for custom library testing page
 custom_library:
   css:
     theme:
-      css/component/custom_library.css: {}
+      css/layout/custom_library.css: {}
   js:
     js/custom_library.js: {}
+
+# define library for movies grid.
+movies_library:
+  css:
+    theme:
+      css/layout/movies.css: {}
+  js:
+    js/movies.js: {}
+  
