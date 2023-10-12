@@ -1,4 +1,4 @@
-uuid: 68f9c01a-c770-4455-a8eb-32a5e5d062f3
+uuid: 6bc20efe-e368-4252-9fe0-bc75450e10ee
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - custom_theme
+    - bootstrap
 _core:
   default_config_hash: 4VDn3bLy009pYlPUWQBHaaGVJu8FPnxNfr2DYrAnNHI
-id: custom_theme_footer
-theme: custom_theme
+id: bootstrap_footer
+theme: bootstrap
 region: footer
 weight: 0
 provider: null

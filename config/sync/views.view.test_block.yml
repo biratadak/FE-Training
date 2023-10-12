@@ -1,12 +1,12 @@
-uuid: 47c1286e-611f-44d5-b38d-756e1c0fd30e
+uuid: f97901a2-d6a5-4c9b-82b8-827b96966e98
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - user
-id: 1st_sidebar_content
-label: '1st sidebar content'
+id: test_block
+label: 'Test Block'
 module: views
 description: ''
 tag: ''
@@ -19,7 +19,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: '1st sidebar content'
+      title: 'Test Block'
       fields:
         title:
           id: title
@@ -85,15 +85,17 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: mini
+        type: full
         options:
           offset: 0
           items_per_page: 5
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -102,6 +104,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -163,6 +166,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      use_ajax: true
       header: {  }
       footer: {  }
       display_extenders: {  }

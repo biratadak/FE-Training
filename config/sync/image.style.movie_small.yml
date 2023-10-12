@@ -1,0 +1,15 @@
+uuid: 8ab66fe8-230c-4fcb-a6c4-d953e84a845d
+langcode: en
+status: true
+dependencies: {  }
+name: movie_small
+label: 'Movie Small (280×100)'
+effects:
+  b29245f4-df71-4ef6-81f2-22351ae04e62:
+    uuid: b29245f4-df71-4ef6-81f2-22351ae04e62
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 280
+      height: 200
+      anchor: left-center

@@ -1,15 +1,15 @@
-uuid: 25a2574a-370f-486b-8eb0-f5b4688d61fe
+uuid: cc252413-fa39-45de-b6f6-f6d82820d260
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - custom_theme
+    - bootstrap
 _core:
   default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
-id: custom_theme_messages
-theme: custom_theme
+id: bootstrap_messages
+theme: bootstrap
 region: header
 weight: -50
 provider: null

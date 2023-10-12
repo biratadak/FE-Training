@@ -1,0 +1,15 @@
+uuid: b30c0484-d540-4d4f-9e88-b7688b45cfb0
+langcode: en
+status: true
+dependencies: {  }
+name: grid_row_1_3
+label: 'grid row 1/3'
+effects:
+  9ffc9757-f9fe-4d9f-9636-d77d22958536:
+    uuid: 9ffc9757-f9fe-4d9f-9636-d77d22958536
+    id: image_crop
+    weight: 1
+    data:
+      width: 700
+      height: 300
+      anchor: center-center

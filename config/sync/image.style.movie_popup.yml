@@ -1,0 +1,15 @@
+uuid: d2a5ede2-1807-4501-996d-3a80e8d8260e
+langcode: en
+status: true
+dependencies: {  }
+name: movie_popup
+label: 'movie popup'
+effects:
+  db202620-7655-4a22-b66e-fa9c53f43a9a:
+    uuid: db202620-7655-4a22-b66e-fa9c53f43a9a
+    id: image_scale
+    weight: 1
+    data:
+      width: 550
+      height: null
+      upscale: false

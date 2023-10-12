@@ -1,4 +1,4 @@
-uuid: ee7f95e4-06a1-45e9-9d03-17fd3b4a58ca
+uuid: 7be1cb4e-2bb1-4fbb-88ac-0228bf414fcf
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,12 @@ dependencies:
   module:
     - system
   theme:
-    - custom_theme
+    - bootstrap
 _core:
   default_config_hash: HrZTblWpMF4fo6BdbBcyHEu5Hp9ds1IZF3FiRd2Q8rU
-id: custom_theme_account_menu
-theme: custom_theme
-region: header
+id: bootstrap_account_menu
+theme: bootstrap
+region: navigation_collapsible
 weight: 11
 provider: null
 plugin: 'system_menu_block:account'

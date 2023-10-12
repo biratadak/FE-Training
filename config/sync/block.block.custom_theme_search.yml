@@ -1,0 +1,28 @@
+uuid: 9ca68d00-0003-4977-9106-b4414a3c54fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - custom_theme
+_core:
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: custom_theme_search
+theme: custom_theme
+region: sidebar_second
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: visible
+  provider: search
+  page_id: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /movies

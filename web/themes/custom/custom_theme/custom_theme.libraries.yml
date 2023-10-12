@@ -39,4 +39,3 @@ movies_library:
       css/layout/movies.css: {}
   js:
     js/movies.js: {}
-  

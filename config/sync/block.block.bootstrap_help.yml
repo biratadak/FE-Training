@@ -1,16 +1,16 @@
-uuid: 42c4a021-bbb6-4c5b-a857-737debb3111d
+uuid: 0d026bd3-9f45-43eb-b183-3005b65d7556
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - custom_theme
+    - bootstrap
 _core:
   default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
-id: custom_theme_help
-theme: custom_theme
-region: header
+id: bootstrap_help
+theme: bootstrap
+region: help
 weight: -30
 provider: null
 plugin: help_block

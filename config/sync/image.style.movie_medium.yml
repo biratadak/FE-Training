@@ -1,0 +1,15 @@
+uuid: 8f82d3bd-3946-46a9-aec7-7c866e808ec5
+langcode: en
+status: true
+dependencies: {  }
+name: movie_medium
+label: 'Movie Medium (400x200)'
+effects:
+  b147f15d-34be-4fd4-a18e-9ae0ff723f60:
+    uuid: b147f15d-34be-4fd4-a18e-9ae0ff723f60
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 400
+      height: 200
+      anchor: left-center
