@@ -1,10 +1,10 @@
-# define library for node 3
+# library for node 3
 node-3:
   css:
     theme:
       css/style.css: {}
 
-# define library for custom stule page
+# library for custom stule page
 custom_theme.custom_style:
   css:
     theme:
@@ -12,7 +12,7 @@ custom_theme.custom_style:
   js:
     js/custom.js: {}
 
-# define library for todo lsit
+# library for todo lsit
 custom_theme.todo_list:
   css:
     theme:
@@ -20,11 +20,11 @@ custom_theme.todo_list:
   js:
     js/todo_list.js: {}
   dependencies:
-    - core/drupalSettings
+    - core/drupal
     - core/jquery
-    - core/jquery.once
+    - core/once
 
-# define library for custom library testing page
+# library for custom library testing page
 custom_library:
   css:
     theme:
@@ -32,10 +32,26 @@ custom_library:
   js:
     js/custom_library.js: {}
 
-# define library for movies grid.
+# Library for movies grid.
 movies_library:
   css:
     theme:
       css/layout/movies.css: {}
   js:
     js/movies.js: {}
+
+# # Slick library for movies
+slick_library:
+  css:
+    theme:
+      //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css: {type: external}
+      //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css: {type: external}
+      css/layout/slideshow.css: {}
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js: {type: external}
+    //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js: {type: external}
+    js/slideshow.js: {}
+  dependencies:
+    - core/jquery
+    - core/once
+    - core/drupal

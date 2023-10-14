@@ -1,6 +1,5 @@
 (function ($, Drupal, once) {
-  Drupal.behaviors.todo_list = {
-    // To Set Todo lists.
+  Drupal.behaviors.custom = {
     attach: function (context, settings) {
       count = 0;
       once(

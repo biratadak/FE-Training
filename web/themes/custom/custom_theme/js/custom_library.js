@@ -1,6 +1,5 @@
 (function ($, Drupal, once) {
-  Drupal.behaviors.todo_list = {
-    // To Set Todo lists.
+  Drupal.behaviors.custom_lib = {
     attach: function (context, settings) {
       once("myCustomBehavior", ".custom-render", context).forEach(function (e) {
         $(e).css("color", e.innerHTML);

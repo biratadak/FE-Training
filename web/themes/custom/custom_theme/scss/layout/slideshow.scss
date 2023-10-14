@@ -1,0 +1,65 @@
+@import "../base/variables";
+@import "../base/base";
+.slideshow {
+  margin-bottom: 50px;
+  .slick-track {
+    .slick-slide {
+      position: relative;
+      .views-field {
+        &.views-field-title,
+        &.views-field-field-heading,
+        &.views-field-field-link {
+          color: $slide-text-color;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          &.views-field-title {
+            top: 40%;
+            font-size: $slider-title-size;
+          }
+          &.views-field-field-heading {
+            top: 50%;
+            font-size: $slider-heading-size;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+          }
+          &.views-field-field-link {
+            top: 80%;
+            font-size: $slider-link-size;
+            text-transform: uppercase;
+            border: $button-border;
+            padding: $button-padding;
+          }
+        }
+      }
+      .views-field-field-banner .field-content img {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .slick-arrow {
+    z-index: 1;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s linear;
+    filter: opacity(0.5);
+
+    // Adding transition and background effect on hover.
+    &:hover {
+      width: 5%;
+      background-image: $slider-arrow-color;
+    }
+
+    &.slick-next {
+      right: 0;
+      border-radius: 100px 0px 0px 100px;
+    }
+    &.slick-prev {
+      left: 0;
+      border-radius: 0px 100px 100px 0px;
+    }
+  }
+}

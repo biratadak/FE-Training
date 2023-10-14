@@ -6,12 +6,28 @@
  */
 
 /**
- * Implements hook_preprocess_HOOK() for page.html.twig.
+ * Implements hook_preprocess_HOOK() for slider block.
+ */
+function custom_theme_preprocess_block__custom_theme_views_block__slideshow_block_1(array &$variables): void {
+  // Adding custom library for movies node.
+  $variables['content']['#attached']['library'][] = 'custom_theme/slick_library';
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for movies gallery.
+ */
+function custom_theme_preprocess_views_view(array &$variables): void {
+  if ($variables['view_array']['#view_id'] == 'movies_gallery') {
+    $variables['#attached']['library'][] = 'custom_theme/movies_library';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for movies gallery.
  */
 function custom_theme_preprocess_views_view_unformatted(array &$variables): void {
-  // Sending the variables and classes to movies node.
-  $reqUri = \Drupal::request()->getRequestUri();
-  if ($reqUri == '/movies' || str_starts_with($reqUri, "/movies")) {
+  // Initializing boolean to active movie row classes.
+  if ($variables['view']->id() == 'movies_gallery') {
     $variables['movies_grid'] = TRUE;
   }
 }
@@ -28,6 +44,7 @@ function custom_theme_preprocess_node(array &$variables): void {
     $variables['content']['data'][] = "RED";
     $variables['content']['data'][] = "BLUE";
     $variables['content']['data'][] = "GREEN";
+
   }
 }
 
@@ -44,12 +61,6 @@ function custom_theme_page_attachments_alter(array &$attachments): void {
   // Adding custom library for custom-render node.
   if ($reqUri == '/custom-render') {
     $attachments['#attached']['library'][] = 'custom_theme/custom_library';
-  }
-
-  // Adding custom library for movies node.
-  if ($reqUri == '/movies' || str_starts_with($reqUri, "/movies")) {
-    // dump("attachment alter");.
-    $attachments['#attached']['library'][] = 'custom_theme/movies_library';
   }
 
 }

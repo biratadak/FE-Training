@@ -21,7 +21,10 @@
   <h3>{{ title }}</h3>
 {% endif %}
 
-<div class="movies-grid">
+{% if movies_grid %}
+  <div class="movies-grid">
+{% endif %}
+
 {% for keys,row in rows %}
   {%
     set row_classes = [
@@ -29,8 +32,11 @@
       movies_grid ? 'grid-item item-' ~ keys,
     ]
   %}
-  <div{{ row.attributes.addClass(row_classes) }}>
+  <div {{ row.attributes.addClass(row_classes) }} >
     {{- row.content -}}
   </div>
 {% endfor %}
+{% if movies_grid %}
 </div>
+{% endif %}
+

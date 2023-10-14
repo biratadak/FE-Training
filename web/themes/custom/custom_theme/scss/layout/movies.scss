@@ -3,7 +3,7 @@
 @import "../base/variables";
 
 // Creating the grid layout for movies.
-.movies-grid {
+.movies-grid{
   column-gap: 10px;
   display: grid;
   grid-template-columns: repeat(1fr, 12);
@@ -141,7 +141,7 @@
       .button {
         border: 3px solid $brand-secondary-color;
         color: $brand-secondary-color;
-        padding: 5px 15px;
+        padding: $button-padding;
         text-decoration: none;
         width: fit-content;
 
