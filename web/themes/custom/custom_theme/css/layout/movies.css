@@ -1,0 +1,189 @@
+@charset "UTF-8"; @import url(../base/_fonts.scss); * {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: font-primary;
+}
+
+a,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+  border: none;
+}
+
+@font-face {
+  font-family: font-primary;
+  src: url(../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: font-primary-italic;
+  src: url(../../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+}
+
+.movies-grid {
+  column-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(1fr, 12);
+  grid-template-rows: repeat(1fr, 3);
+  row-gap: 15px;
+}
+
+.grid-item {
+  position: relative;
+  /* Placing title at left bottom */
+  /* Placing release date at right middle */ }
+.grid-item .views-field-title {
+  bottom: 0;
+  color: #fff;
+  font-size: medium;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  pointer-events: none;
+  position: absolute;
+}
+.grid-item .views-field-field-release-date {
+  color: #fff;
+  position: absolute;
+  right: 20%;
+  text-align: center;
+  top: 50%;
+  transform: translate(-10%, -50%);
+  transition: right 1s ease;
+  visibility: hidden;
+  /* Increasing date size */
+  /* Increasing month size */ }
+.grid-item .views-field-field-release-date .date {
+  font-size: 500%;
+  line-height: 0;
+}
+.grid-item .views-field-field-release-date .month {
+  font-size: 125%;
+}
+.grid-item .views-field-field-release-date .month::after {
+  background-color: #e50913;
+  border-radius: 5px;
+  content: "";
+  display: block;
+  height: 5px;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+  width: 0%;
+}
+.grid-item .views-field-field-movie-image {
+  background-color: #e50913;
+  overflow: hidden;
+}
+.grid-item .views-field-field-movie-image img {
+  object-fit: cover;
+  transition: scale 2s ease, opacity 0.5s ease-in-out;
+  width: 100%;
+}
+.grid-item .views-field-field-movie-image:hover ~ .views-field-field-release-date {
+  pointer-events: none;
+  right: 10%;
+  visibility: visible;
+}
+.grid-item .views-field-field-movie-image:hover ~ .views-field-field-release-date .month::after {
+  background-color: #fff;
+  width: 60%;
+}
+.grid-item .views-field-field-movie-image:hover img {
+  opacity: 0.5;
+  scale: 110%;
+}
+
+.popup {
+  -webkit-backdrop-filter: brightness(0.1);
+  backdrop-filter: brightness(0.1);
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+.popup > .content {
+  background-color: #141414;
+  display: flex;
+  height: min-content;
+  left: 50%;
+  overflow: hidden;
+  pointer-events: none;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+.popup > .content img {
+  object-fit: cover;
+}
+.popup > .content .description {
+  color: rgba(219, 209, 209, 0.728);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.popup > .content .description .date {
+  margin-bottom: 20px;
+}
+.popup > .content .description .button {
+  border: 3px solid #fff;
+  color: #fff;
+  padding: 5px 15px;
+  text-decoration: none;
+  width: fit-content;
+}
+.popup > .content .description .button::before {
+  content: "▶️ ";
+}
+
+/* 1st row */
+.item-0 {
+  grid-column: 1 / span 4;
+}
+
+.item-1 {
+  grid-column: 5 / span 4;
+}
+
+.item-2 {
+  grid-column: 9 / span 4;
+}
+
+/* 2nd row */
+.item-3 {
+  grid-column: 1 / span 6;
+}
+
+.item-4 {
+  grid-column: 7 / span 6;
+}
+
+/* 3rd row */
+.item-5 {
+  grid-column: 1 / span 3;
+}
+
+.item-6 {
+  grid-column: 4 / span 3;
+}
+
+.item-7 {
+  grid-column: 7 / span 3;
+}
+
+.item-8 {
+  grid-column: 10 / span 3;
+}
+
+@media (max-width: 450px) {
+  .movies-grid {
+    display: flex;
+    flex-direction: column;
+} }

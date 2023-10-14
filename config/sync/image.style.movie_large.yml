@@ -1,0 +1,15 @@
+uuid: 18f7862b-d190-4534-b24b-914c7f5a3560
+langcode: en
+status: true
+dependencies: {  }
+name: movie_large
+label: 'Movie Large (700x200)'
+effects:
+  2a0803aa-7c7b-4337-a949-95d2666e57ae:
+    uuid: 2a0803aa-7c7b-4337-a949-95d2666e57ae
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 200
+      anchor: left-center

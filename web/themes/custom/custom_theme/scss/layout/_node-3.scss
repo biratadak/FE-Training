@@ -1,0 +1,9 @@
+@import "./base/fonts";
+@import "./base/variables";
+
+// Styled node 3.
+.page-header {
+  background-color: $header-background-color;
+  font-family: $header-font;
+  width: 30%;
+}

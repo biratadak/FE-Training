@@ -1,0 +1,7 @@
+{% macro input(id, class, placeholder, value, type = "text", size = 20) %}
+    <input id="{{ id }}" class="{{ class }}" type="{{ type }}" placeholder="{{ placeholder|e }}", value="{{ value|e }}" size="{{ size }}"/>
+{% endmacro %}
+
+{% macro textarea(id, value, rows = 10, cols = 40) %}
+    <textarea id="{{ id }}" rows="{{ rows }}" cols="{{ cols }}">{{ value|e }}</textarea>
+{% endmacro %}

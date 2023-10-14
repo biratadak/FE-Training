@@ -1,0 +1,31 @@
+uuid: afcc36a1-ca89-4bd2-beb3-e139ba679f79
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.movie_large
+    - image.style.movie_medium
+    - image.style.movie_popup
+    - image.style.movie_small
+  theme:
+    - custom_theme
+id: movie_image_style
+label: 'Movie Image Style'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: movie_small
+    breakpoint_id: custom_theme.min
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: movie_medium
+    breakpoint_id: custom_theme.mid
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: movie_large
+    breakpoint_id: custom_theme.max
+    multiplier: 1x
+breakpoint_group: custom_theme
+fallback_image_style: movie_popup

@@ -1,15 +1,15 @@
-uuid: 62465083-3175-430e-af0d-0dcdd793110a
+uuid: d777a7b3-448d-4e2b-b6a9-e2883ae1be2f
 langcode: en
 status: true
 dependencies:
   theme:
     - custom_theme
 _core:
-  default_config_hash: qYppfxaWSy6BwGNKdMch1PeUA24PlRTt39jQft6A6Kg
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
 id: custom_theme_page_title
 theme: custom_theme
-region: content
-weight: -6
+region: header
+weight: 0
 provider: null
 plugin: page_title_block
 settings:

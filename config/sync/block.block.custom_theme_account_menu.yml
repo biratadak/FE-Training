@@ -1,4 +1,4 @@
-uuid: 1c3bd859-08eb-4864-8202-21db57003141
+uuid: ee7f95e4-06a1-45e9-9d03-17fd3b4a58ca
 langcode: en
 status: true
 dependencies:
@@ -9,11 +9,11 @@ dependencies:
   theme:
     - custom_theme
 _core:
-  default_config_hash: YRZjNp4d68NjJAVhrrUrXKwpV12i7OFWg4MY6Bsd0mw
+  default_config_hash: HrZTblWpMF4fo6BdbBcyHEu5Hp9ds1IZF3FiRd2Q8rU
 id: custom_theme_account_menu
 theme: custom_theme
-region: footer
-weight: -4
+region: header
+weight: 11
 provider: null
 plugin: 'system_menu_block:account'
 settings:
@@ -22,6 +22,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 0
+  depth: 2
   expand_all_items: false
 visibility: {  }

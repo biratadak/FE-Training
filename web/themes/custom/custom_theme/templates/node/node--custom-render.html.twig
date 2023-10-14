@@ -1,0 +1,11 @@
+{% if content %}
+    <div class="custom ">
+  {% for item in content.data %}
+    <li class="{{ newClass }}">
+    {{item}}
+    </li>
+  {% else %}
+  No Data Provided.
+  {% endfor %}
+    </div>
+{% endif %}

@@ -1,0 +1,201 @@
+@import "../base/base";
+@import "../base/fonts";
+@import "../base/variables";
+
+// Creating the grid layout for movies.
+.movies-grid{
+  column-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(1fr, 12);
+  grid-template-rows: repeat(1fr, 3);
+  row-gap: 15px;
+}
+
+// Styling grid items.
+.grid-item {
+  position: relative;
+
+  /* Placing title at left bottom */
+  & .views-field-title {
+    bottom: 0;
+    color: $brand-secondary-color;
+    font-size: medium;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  /* Placing release date at right middle */
+  & .views-field-field-release-date {
+    color: $brand-secondary-color;
+    position: absolute;
+    right: 20%;
+    text-align: center;
+    top: 50%;
+    transform: translate(-10%, -50%);
+    transition: right 1s ease;
+    visibility: hidden;
+
+    /* Increasing date size */
+    & .date {
+      font-size: 500%;
+      line-height: 0;
+    }
+
+    /* Increasing month size */
+    & .month {
+      font-size: 125%;
+
+      // Placing horizontal line after month.
+      &::after {
+        background-color: $brand-primary;
+        border-radius: 5px;
+        content: "";
+        display: block;
+        height: 5px;
+        margin: auto;
+        transition: all 0.5s ease-in-out;
+        width: 0%;
+      }
+    }
+  }
+
+  // Styling the movie image.
+  & .views-field-field-movie-image {
+    background-color: $brand-primary;
+    overflow: hidden;
+
+    & img {
+      object-fit: cover;
+      transition: scale 2s ease, opacity 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    // Adding hover effect on release date and movie image.
+    &:hover {
+      // Hover effect on date.
+      &~.views-field-field-release-date {
+        pointer-events: none;
+        right: 10%;
+        visibility: visible;
+
+        & .month {
+          &::after {
+            background-color: $brand-secondary-color;
+            width: 60%;
+          }
+        }
+      }
+
+      // Hover effect on image.
+      & img {
+        opacity: 0.5;
+        scale: 110%;
+      }
+    }
+  }
+}
+
+// Styling the popup.
+.popup {
+  -webkit-backdrop-filter: brightness(0.1);
+  backdrop-filter: brightness(0.1);
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+
+  // Styling the popup content. 
+  &>.content {
+    background-color: $bg-accent-color;
+    display: flex;
+    height: min-content;
+    left: 50%;
+    overflow: hidden;
+    pointer-events: none;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+
+    // Styling the image of content.
+    & img {
+      object-fit: cover;
+    }
+
+    .description {
+      color: $popup-text;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px 20px;
+
+      .date {
+        margin-bottom: 20px;
+      }
+
+      .button {
+        border: 3px solid $brand-secondary-color;
+        color: $brand-secondary-color;
+        padding: $button-padding;
+        text-decoration: none;
+        width: fit-content;
+
+        // Adding a play icon in button.
+        &::before {
+          content: "▶️ ";
+        }
+      }
+    }
+  }
+}
+
+/* 1st row */
+.item-0 {
+  grid-column: 1 / span 4;
+}
+
+.item-1 {
+  grid-column: 5 / span 4;
+}
+
+.item-2 {
+  grid-column: 9 / span 4;
+}
+
+/* 2nd row */
+.item-3 {
+  grid-column: 1 / span 6;
+}
+
+.item-4 {
+  grid-column: 7 / span 6;
+}
+
+/* 3rd row */
+.item-5 {
+  grid-column: 1 / span 3;
+}
+
+.item-6 {
+  grid-column: 4 / span 3;
+}
+
+.item-7 {
+  grid-column: 7 / span 3;
+}
+
+.item-8 {
+  grid-column: 10 / span 3;
+}
+
+@media (max-width: 450px) {
+  .movies-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the custom_theme theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for slider block.
+ */
+function custom_theme_preprocess_block__custom_theme_views_block__slideshow_block_1(array &$variables): void {
+  // Adding custom library for movies node.
+  $variables['content']['#attached']['library'][] = 'custom_theme/slick_library';
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for movies gallery.
+ */
+function custom_theme_preprocess_views_view(array &$variables): void {
+  if ($variables['view_array']['#view_id'] == 'movies_gallery') {
+    $variables['#attached']['library'][] = 'custom_theme/movies_library';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for movies gallery.
+ */
+function custom_theme_preprocess_views_view_unformatted(array &$variables): void {
+  // Initializing boolean to active movie row classes.
+  if ($variables['view']->id() == 'movies_gallery') {
+    $variables['movies_grid'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function custom_theme_preprocess_node(array &$variables): void {
+  // Sending the variables to custom-render node.
+  if ($variables['url'] == '/custom-render') {
+    // Setting the custom class in the node.
+    $variables['newClass'] = 'custom-render';
+    // Passing Color values to the content data.
+    $variables['content']['data'][] = "RED";
+    $variables['content']['data'][] = "BLUE";
+    $variables['content']['data'][] = "GREEN";
+
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function custom_theme_page_attachments_alter(array &$attachments): void {
+  $reqUri = Drupal::request()->getRequestUri();
+  // Adding custom library for 54 node.
+  if ($reqUri == '/node/54') {
+    $attachments['#attached']['library'][] = 'custom_theme/custom_theme.custom_style';
+  }
+
+  // Adding custom library for custom-render node.
+  if ($reqUri == '/custom-render') {
+    $attachments['#attached']['library'][] = 'custom_theme/custom_library';
+  }
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function custom_theme_theme_suggestions_node_alter(array &$suggestions, array $variables): void {
+  // Add custom library for custom-render node.
+  if ($variables['elements']['#contextual_links']['node']['route_parameters']['node'] == 56) {
+    $suggestions[] = 'node__custom_render';
+  }
+}
